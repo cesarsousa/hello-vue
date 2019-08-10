@@ -14,14 +14,25 @@ return {
 }
 },
 methods: {
-addTask ($event) {
-let value = $event.target.value
-let task = new Task()
-task.completed = false
-task.title = value
-this.$emit('newTask', task)
-$event.target.value = ''
-}
+	
+	createTask (value) {
+		let task = new Task()
+		task.completed = false
+		task.title = value
+		return task
+	},
+	clearField () {
+		this.$el.querySelector('input').value = ''
+	},
+	broadcast (task) {
+		this.$emit('newTask', task)
+	},	
+	addTask ($event) {
+		let value = $event.target.value
+		let task = this.createTask(value)
+		this.broadcast(task)
+		this.clearField($event)		
+	}
 }
 }
 </script>

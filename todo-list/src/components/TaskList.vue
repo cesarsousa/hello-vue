@@ -1,8 +1,12 @@
 <template>
 <ul class="todo-list">
-<li v-for="todo in todoList" class="todo">
+<li v-for="todo in sortedTasks"
+class="todo">
 <div class="view">
-<label>{{ todo.title }}</label>
+<input class="toggle" @click="completeTask(todo)" type="checkbox">
+<label v-if="todo.completed" class="todo-completed">{{
+todo.title }}</label>
+<label v-else :class="{ 'todo-completed': todo.completed }" >{{ todo.title }}</label>
 </div>
 </li>
 </ul>
@@ -10,14 +14,32 @@
 
 <script>
 export default {
-props: ['todoList']
+props: ['todoList'],
+computed: {
+sortedTasks: function () {
+let sorted = this.todoList
+return sorted.sort(function (a, b) {
+if (a.title < b.title) return -1
+if (a.title > b.title) return 1
+return 0
+})
+}
+},
+methods: {
+completeTask (task) {
+task.completed = !task.completed
+}
+}
 }
 </script>
 
 <style>
+
+.paddingPadrao {
+	padding: 10px;
+}
+
 .todo-list {
-	margin: 0;
-	padding: 0;
 	list-style: none;
 }
 .todo-list li {
@@ -46,29 +68,24 @@ props: ['todoList']
 }
 .todo-list li .toggle {
 	text-align: center;
-	width: 40px;
+	width: 30px;
 	/* auto, since non-WebKit browsers doesn't support input styling */
 	height: auto;
 	position: absolute;
-	top: 0;
+	paddind: 10px;
+	/*top: 0;
 	bottom: 0;
 	margin: auto 0;
-	border: none; /* Mobile Safari */
+	border: none; 
 	-webkit-appearance: none;
-	appearance: none;
+	appearance: none; */
 }
-.todo-list li .toggle:after {
-	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
-}
-.todo-list li .toggle:checked:after {
-	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
-}
+
 .todo-list li label {
 	word-break: break-all;
 	padding: 15px 60px 15px 15px;
 	margin-left: 45px;
 	display: block;
-	line-height: 1.2;
 	transition: color 0.4s;
 }
 .todo-list li.completed label {
