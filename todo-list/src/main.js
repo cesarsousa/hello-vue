@@ -16,19 +16,16 @@ const router = new VueRouter({
   routes
 })
 
-Vue.use(VueResource)
-
 /* eslint-disable no-new */
 new Vue({
-  store,
   router,
   el: '#app',
-  template:
+  template: `
     <div id="app">
       <transition name="fade"  mode="out-in">
         <router-view class="view"></router-view>
       </transition>
     </div>
-	,
+  `,
   components: { App }
 })
