@@ -1,11 +1,12 @@
 <template>
-<section class="todoapp">
-<header class="header">
-<h1>Tarefas</h1>
-<input-task @newTask="addTask" ></input-task>
-<task-list :todo-list="tasks" ></task-list>
-</header>
-</section>
+	<section class="todoapp">
+		<header class="header">
+			<h1>Tarefas</h1>
+		</header>
+		<input-task @newTask="addTask" ></input-task>
+		<task-list v-bind:todo-list="tasks" ></task-list>
+		<router-link class="cep" to="/cep">Verificar CEP</router-link>
+	</section>
 </template>
 
 <script>
