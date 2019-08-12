@@ -16,6 +16,12 @@ const router = new VueRouter({
   routes
 })
 
+// ========================
+// Resource
+// ========================
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
+
 new Vue({
 router,
 el: '#app',
