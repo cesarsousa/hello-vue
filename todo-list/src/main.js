@@ -22,13 +22,18 @@ const router = new VueRouter({
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
 
+import store from './store/index'
+
 // ========================
 // Events
 // ========================
 import VueEvents from './plugins/events'
 Vue.use(VueEvents)
 
+
+
 new Vue({
+store,
 router,
 el: '#app',
 template: `
