@@ -9,6 +9,8 @@ import Usuarios from './component/Usuarios.vue'
 import NovoUsuario from './component/NovoUsuario.vue'
 import Notificacao from './component/Notificacao.vue'
 
+import loja from './loja/raiz'
+
 Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'history',
@@ -24,10 +26,8 @@ const router = new VueRouter({
   ]
 })
 
-
-
-
 new Vue({
+  store: loja,
   el: '#app',
   router,
   render: h => h(App)
