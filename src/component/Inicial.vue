@@ -7,10 +7,7 @@
 
 <script>
 export default {
-    name: 'lv-inicial',
-    mounted() {
-        setTimeout(() => {this.$store.state.nome = 'Novo nome'}, 1500)
-    }    
+    name: 'lv-inicial'   
 }
 </script>
 

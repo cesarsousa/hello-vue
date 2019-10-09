@@ -3,6 +3,7 @@
     <router-link to="/">Inicial</router-link>
     <router-link to="/usuarios">Usuarios</router-link>
     <router-view></router-view>
+    <lv-addtarefa></lv-addtarefa>
     
   </div>
 </template>
@@ -15,10 +16,11 @@
   import LvLeitor from './LvLeitor.vue'
   import LvComentarios from './LvComentarios.vue'
   import LvUsuario from './LvUsuario.vue'
+  import LvAddtarefa from './component/AddTarefa.vue'
 
   export default {
     name: 'app',
-    components: {lvBusca, lvPerfil, LvLista, lvCartao, LvLeitor, LvComentarios, LvUsuario},
+    components: {lvBusca, lvPerfil, LvLista, lvCartao, LvLeitor, LvComentarios, LvUsuario, LvAddtarefa},
     data () { 
       return { 
         chat: ''

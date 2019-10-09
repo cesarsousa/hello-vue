@@ -19,3 +19,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 Guia de estudo...
 9.3 MUTATIONS — ALTERANDO DADOS
+pagina 115
