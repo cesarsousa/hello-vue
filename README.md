@@ -18,4 +18,4 @@ npm run build
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 Guia de estudo...
-cap 8.6
+9.3 MUTATIONS — ALTERANDO DADOS
