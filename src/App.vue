@@ -4,23 +4,23 @@
     <router-link to="/usuarios">Usuarios</router-link>
     <router-view></router-view>
     <lv-addtarefa></lv-addtarefa>
+    <lv-tarefas></lv-tarefas>
+    <l-v-busca-tarefa></l-v-busca-tarefa>
+    
     
   </div>
 </template>
 
 <script>
-  import lvBusca from './LVBusca.vue'
-  import lvPerfil from './LVPerfil.vue'
-  import LvLista from './LvLista.vue'
-  import lvCartao from './LvCartao.vue'
-  import LvLeitor from './LvLeitor.vue'
-  import LvComentarios from './LvComentarios.vue'
+  
   import LvUsuario from './LvUsuario.vue'
   import LvAddtarefa from './component/AddTarefa.vue'
+  import LvTarefas from './component/Tarefas.vue'
+  import LVBuscaTarefa from './component/BuscaTarefa.vue'
 
   export default {
     name: 'app',
-    components: {lvBusca, lvPerfil, LvLista, lvCartao, LvLeitor, LvComentarios, LvUsuario, LvAddtarefa},
+    components: {LvUsuario, LvAddtarefa, LvTarefas, LVBuscaTarefa},
     data () { 
       return { 
         chat: ''
@@ -49,13 +49,8 @@ h1, h2 {
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: circle;
   padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 
 a {

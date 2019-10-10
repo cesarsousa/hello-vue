@@ -18,5 +18,5 @@ npm run build
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 Guia de estudo...
-9.3 MUTATIONS — ALTERANDO DADOS
-pagina 115
+9.5 ACTIONS — EXECUTANDO MUTAÇÕES INDIRETAMENTE
+pagina 122
