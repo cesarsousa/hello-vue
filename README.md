@@ -20,5 +20,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 GIT HUB https://github.com/leonardovilarinho/livro-vue
 
 Guia de estudo...
-9.5 ACTIONS — EXECUTANDO MUTAÇÕES INDIRETAMENTE
-pagina 122
+capitulo 10 pg 135
