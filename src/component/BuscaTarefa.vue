@@ -1,5 +1,6 @@
 <template>
     <div>
+        <br>
         <label>Busca por</label>
         <input type="text" v-model="termo">
         <ul>

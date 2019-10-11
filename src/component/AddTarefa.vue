@@ -12,7 +12,7 @@ export default {
     methods: {
         adicionar(){
             if(this.tarefa != '')
-                this.$store.commit('ADD_TAREFA', this.tarefa)
+                this.$store.dispatch('adicionarTarefa', this.tarefa)
             this.tarefa = ''
         }
     }

@@ -15,7 +15,7 @@ export default {
     },
     methods: {
         apagar(){
-            this.$store.commit('DEL_TAREFA', this.tarefa)
+            this.$store.dispatch('removerTarefa', this.tarefa)
         }
     }
     
