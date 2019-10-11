@@ -4,19 +4,22 @@
         <label>Busca por</label>
         <input type="text" v-model="termo">
         <ul>
-            <li v-for="tarefa in resultado">{{ tarefa }}</li>
+            <li v-for="tarefa in resultado(termo)">{{ tarefa }}</li>
         </ul>
     </div>
 </template>
 
 <script>
+
+import { mapGetters } from "vuex";
+
 export default {
     name: 'lv-buscatarefa',
     data() { return { termo: '' } },
     computed: {
-        resultado(){
-            return this.$store.getters.buscaTarefas(this.termo)
-        }
+        ...mapGetters({
+            resultado: 'buscaTarefas'
+        })
     }
 }
 </script>

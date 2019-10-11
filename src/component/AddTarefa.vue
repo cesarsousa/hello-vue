@@ -1,18 +1,24 @@
 <template>
     <div>
         <input type="text" v-model="tarefa">
-        <button @click="adicionar">Adicionar</button>    
+        <button @click="submeterTarefa">Adicionar</button>    
     </div>    
 </template>
 
 <script>
+
+import { mapActions } from "vuex";
+
 export default {
     name: 'lv-addtarefa',
     data() { return { tarefa: ''} },
     methods: {
-        adicionar(){
+        ...mapActions({
+            adicionar: 'adicionarTarefa'
+        }),
+        submeterTarefa(){
             if(this.tarefa != '')
-                this.$store.dispatch('adicionarTarefa', this.tarefa)
+                this.adicionar(this.tarefa)
             this.tarefa = ''
         }
     }

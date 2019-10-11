@@ -13,24 +13,19 @@
 
 <script>
   
-  import LvUsuario from './LvUsuario.vue'
+  import LvUsuario from './component/LvUsuario.vue'
   import LvAddtarefa from './component/AddTarefa.vue'
   import LvTarefas from './component/Tarefas.vue'
   import LVBuscaTarefa from './component/BuscaTarefa.vue'
 
+  import {mapState} from 'vuex'
+
   export default {
     name: 'app',
     components: {LvUsuario, LvAddtarefa, LvTarefas, LVBuscaTarefa},
-    data () { 
-      return { 
-        chat: ''
-      }
-    },
-    methods: {
-      escrever(mensagem) {
-        this.chat = mensagem + '<hr>' + this.chat
-      }
-    }  
+    computed:{
+      ...mapState(['nome'])
+    }
   }
 </script>
 

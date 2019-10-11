@@ -17,6 +17,8 @@ npm run build
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+GIT HUB https://github.com/leonardovilarinho/livro-vue
+
 Guia de estudo...
 9.5 ACTIONS — EXECUTANDO MUTAÇÕES INDIRETAMENTE
 pagina 122

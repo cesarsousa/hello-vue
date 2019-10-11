@@ -13,13 +13,15 @@
 
 import LvDeltarefa from './DelTarefa.vue'
 
+import { mapGetters } from "vuex";
+
 export default {
     name: 'lv-tarefas',
     components: {LvDeltarefa},
     computed: {
-        tarefas(){
-            return this.$store.getters.listaTarefas
-        }
+        ...mapGetters({
+            tarefas: 'listaTarefas'
+        })
     }
 }
 </script>
