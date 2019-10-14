@@ -3,32 +3,29 @@
     <router-link to="/">Inicial</router-link>
     <router-link to="/usuarios">Usuarios</router-link>
     <router-view></router-view>
+    <lv-addtarefa></lv-addtarefa>
+    <lv-tarefas></lv-tarefas>
+    <l-v-busca-tarefa></l-v-busca-tarefa>
+    
     
   </div>
 </template>
 
 <script>
-  import lvBusca from './LVBusca.vue'
-  import lvPerfil from './LVPerfil.vue'
-  import LvLista from './LvLista.vue'
-  import lvCartao from './LvCartao.vue'
-  import LvLeitor from './LvLeitor.vue'
-  import LvComentarios from './LvComentarios.vue'
-  import LvUsuario from './LvUsuario.vue'
+  
+  import LvUsuario from './component/LvUsuario.vue'
+  import LvAddtarefa from './component/AddTarefa.vue'
+  import LvTarefas from './component/Tarefas.vue'
+  import LVBuscaTarefa from './component/BuscaTarefa.vue'
+
+  import {mapState} from 'vuex'
 
   export default {
     name: 'app',
-    components: {lvBusca, lvPerfil, LvLista, lvCartao, LvLeitor, LvComentarios, LvUsuario},
-    data () { 
-      return { 
-        chat: ''
-      }
-    },
-    methods: {
-      escrever(mensagem) {
-        this.chat = mensagem + '<hr>' + this.chat
-      }
-    }  
+    components: {LvUsuario, LvAddtarefa, LvTarefas, LVBuscaTarefa},
+    computed:{
+      ...mapState(['nome'])
+    }
   }
 </script>
 
@@ -47,13 +44,8 @@ h1, h2 {
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: circle;
   padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 
 a {

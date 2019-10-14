@@ -17,5 +17,7 @@ npm run build
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+GIT HUB https://github.com/leonardovilarinho/livro-vue
+
 Guia de estudo...
-cap 8.6
+capitulo 10 pg 135
