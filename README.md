@@ -20,4 +20,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 GIT HUB https://github.com/leonardovilarinho/livro-vue
 
 Guia de estudo...
-capitulo 10 pg 135
+capitulo 10 pg 138
