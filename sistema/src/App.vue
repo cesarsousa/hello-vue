@@ -1,18 +1,21 @@
 <template>
   <div id="app">
-    <router-view></router-view>
-    <img src="./assets/logo.png">
-    <lv-registro/>
+    <app-header></app-header>
+    <app-content></app-content>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import LvRegistro from './components/LvRegistro.vue'
+
+import AppHeader from './layout/AppHeader.vue'
+import AppContent from './layout/AppContent.vue'
+import AppFooter from './layout/AppFooter.vue'
 
 export default {
   name: 'App',
-  components: {
-    LvRegistro
+  components:{
+    AppHeader,AppContent,AppFooter
   }
 }
 </script>
@@ -22,11 +25,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
-
-body, html, * { text-align: center }
-
 </style>

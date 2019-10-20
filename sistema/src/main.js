@@ -5,14 +5,9 @@ import App from './App'
 
 Vue.config.productionTip = false
 
-import LvInput from './components/LvInput.vue'
-
-import router from './rotas'
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  components: { App, LvInput },
-  template: '<App/>',
-  router: router
+  components: { App },
+  template: '<App/>'
 })
